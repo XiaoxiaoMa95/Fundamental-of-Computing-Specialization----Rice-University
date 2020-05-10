@@ -1,0 +1,28 @@
+Tip #1
+Common issues from previous versions of IIPP
+
+Remember that the input handler input_guess(guess) in the program template takes a parameter guess that is a string. Your first statement in input_guess should convert guess into an integer using the function
+int(guess).
+You should not use a While loop in this mini-project. If you are tempted to use one, stop and think about how input fields work. Each call to 𝚒𝚗𝚙𝚞𝚝_𝚐𝚞𝚎𝚜𝚜 advances the game by one guess, not lots of guesses.
+
+
+Tip #2
+Testing input_guess()
+
+The key function in "Guess the number" is input_guess(), the event handler for your input field. It takes a number (entered as a string), compares it to the global variable containing the secret number, and prints out one step of the game. To help you determine whether your implementation of input_guess() is working, we have prepared the following testing template with the same structure as the practice exercises.
+Paste your implementation of "Guess the number" into the template below and run the template. The bottom of the template contains a sequence of calls to input_guess() for three games of "Guess the number". Uncomment each sequence of calls and check whether the output in the console matches that provided in the comments below. Note that your output doesn't have to be identical, just of a similar form. If the global variable containing your secret number is not called secret_number, you should change the assignment in the testing code to use your variable name for the secret number.
+http://www.codeskulptor.org/#examples-gtn_testing_template.py
+
+Tip #3
+Maintaining the current guess range and starting/restarting your game
+
+For the last two steps, you need to vary the range of your game. I suggest that you create a global variable (call it
+num_range) that contains the range for the current game. Now, your button handlers can simply set
+num_range appropriately and call the function new_game() that restarts your game. This function new_game() should initialize all of the appropriate global variables as well as print out any necessary messages when you start/restart a game. You should call new_game() in four places: in each of the two buttons handlers, after a completed game in input_guess() and before frame.start() to initialize the first game.
+
+Tip #4
+Limiting the number of global variables
+
+Many of the students that sought help in the Code Clinic in previous session of IIPP made two copies of each of their global variables, one for each range. For example, they might have had secret_number100 and secret_number1000. This design choice ignores the suggested mini-project development process and makes your code very complex. Just keep a single copy of each global variable and initialize it correctly based on the current range of guesses (also stored as a global variable). This choice will make your code much simpler.
+
+

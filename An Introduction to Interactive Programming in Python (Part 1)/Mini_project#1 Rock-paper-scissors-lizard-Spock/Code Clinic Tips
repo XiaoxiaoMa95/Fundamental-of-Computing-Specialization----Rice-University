@@ -1,0 +1,38 @@
+https://www.coursera.org/learn/interactive-python-1/supplement/NlFfP/code-clinic-tips
+
+Tip #1
+A crucial part of implementing RPSLS is building the two helper functions \color{red}{\verb|name_to_number()|}name_to_number() and \color{red}{\verb|number_to_name()|}number_to_name(). One good programming practice that will save you lots of time when implementing your mini-projects is to test your helper functions thoroughly before you proceed to using them. To help you with this process, we have created two program templates that you can use to test these helper functions.
+
+To use our templates, open the provided CodeSkulptor links below, then copy and paste your implementation of the helper function into the template. Then, when you run the resulting program, the output created by the program should match the output indicated in the template's comments. If your helper function passes this test, it's likely that your implementation is correct and you can move on to the next step of the mini-project.
+
+name_to_number template  http://www.codeskulptor.org/#examples-name_to_number_template.py
+
+number_to_name template  http://www.codeskulptor.org/#examples-number_to_name_template.py
+
+Tip #2
+Looking over help requests sent to the Code Clinic from previous sessions, here are some common coding problems for RPSLS.
+
+Incorrectly using \color{red}{\verb|return|}return in place of \color{red}{\verb|print|}print. The helper functions \color{red}{\verb|name_to_number()|}name_to_number() and \color{red}{\verb|number_to_name()|}number_to_name() should use \color{red}{\verb|return|}return since you want them to compute and return a value for you. On the other hand \color{red}{\verb|rpsls()|}rpsls() should not use \color{red}{\verb|return|}return. It should use \color{red}{\verb|print|}print to display its results in the console.
+Failing to capitalize \color{red}{\verb|"Spock"|}"Spock". Strings are case-sensitive, so \color{red}{\verb|"Spock"|}"Spock" is not the same as \color{red}{\verb|"spock"|}"spock" in Python.
+The string \color{red}{\verb|"0"|}"0" is not the same as the number \color{red}{\verb|0|}0. The conditions \color{red}{\verb|foo == 0|}foo==0 and \color{red}{\verb|foo == "0"|}foo=="0" mean different things.
+The bodies of functions should be indented. Python uses indentation to define the body of a function.
+Compound conditionals testing whether a number is one of two choices should be like \color{red}{\verb|if (num == 1) or (num == 2):|}if(num==1)or(num==2):, not \color{red}{\verb|if num == (1 or 2):|}ifnum==(1or2):. In English, the second form looks like shorthand for the first. But in Python, they mean different things, and the second form is not what you want for RPSLS.
+If you avoid or catch these 5 errors, you will save yourself a lot of time.
+
+Tip #3 - The difference between print and return explained (from post by Andrea)
+I wanted to expand a bit on one of the Code Clinic tips (item 2) linked in the mini-project description -- the difference between "print" and "return". Whenever the computer sees "return", it sends back whatever value you put after the word "return" in the same line, or None if you put nothing. It does not do anything else in that function that comes after the line with return. It also does not print anything. Meanwhile, "print" simply prints a line to the console. It does not send back any values or stop the function in its tracks like return does. It just prints.
+
+Here is a silly example. In it I am using a helper function inside another function. As you can see, the helper function uses return to send back a value to the main function. The main function prints the value it sent back, using print.
+
+http://www.codeskulptor.org/#user19_kFqSg2t7wd_0.py
+
+If I add another line after the "return" line in the helper function, it will never ever be run because the function always stops at the line with "return".
+
+http://www.codeskulptor.org/#user20_upzRkvaSYU_0.py
+
+Tip #4
+In constructing the function \color{red}{\verb|rplsls()|}rplsls(), you will probably compute the difference of two numbers and take the result modulo (remainder) five. In Python, the remainder operator has higher precedence than minus so \color{red}{\verb|2 - 3 % 5|}2-3%5 and \color{red}{\verb|(2 - 3) % 5|}(2-3)%5 give different answers. To avoid having this issue arise, make sure to use parentheses to ensure that the subtraction is done before the remainder.
+
+Tip #5 - Using modular arithmetic to determine the winner (from a student post by Michael)
+The diagram below may help people understand the use of modulo arithmetic to determine the winner. Numbers are colored according to who wins, player (blue) or computer (red), or tie (yellow). Small colored number above the diagonal is just the difference between \color{red}{\verb|player_value|}player_value and \color{red}{\verb|computer_value|}computer_value, simple subtraction. The larger colored number, below the diagonal, is that difference modulo 5. Notice a useful pattern as to who wins vs who loses. Hope it helps!
+https://d3c33hcgiwev3.cloudfront.net/imageAssetProxy.v1/v0-5pq_mEeWSpg5grrcQqw_c02a88fe2e45446de08b1114ec893a3a_rpsls-Modulus-chart.png?expiry=1588723200000&hmac=XYW1EIWjOTjtMdMwp-hzHQd6MgHE0pbglmgMsQWj9KI

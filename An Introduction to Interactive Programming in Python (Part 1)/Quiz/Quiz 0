@@ -1,0 +1,102 @@
+1. Which of the following are syntactically correct strings?
+Try each of them in CodeSkulptor.
+
+"It's a beautiful day."|}"It’s a beautiful day."
+Correct
+This is a string. A single-quote (apostrophe) can appear inside double-quotes.
+
+’Hello’
+Correct
+This is a string. You can use single-quotes.
+
+"Hello"
+Correct
+This is a string. You can use double-quotes.
+
+
+2. To display a value in the console, what Python keyword do you use?
+
+print
+Correct
+
+
+3. In the following code, there is one line starting with #. What does this line mean to Python?
+
+tax_rate = 0.15
+income = 40000
+deduction = 10000
+
+# Calculate income taxes
+tax = (income - deduction) * tax_rate
+print tax
+
+
+This is a comment aimed at the human reader. Python ignores such comments.
+Correct
+
+
+4.  Which of the following arithmetic expressions are syntactically correct?
+Try each of them in CodeSkulptor.
+
+(7 - 2) / (3 ** 2)
+Correct
+This example has correct syntax.
+
+(8 + (1 + (2 * 4) - 3))
+Correct
+This example has correct syntax.
+
+7 / +4
+Correct
+This example has correct syntax. You can put a positive sign in front of a number like this.
+
+
+5. You would like to make it so that the variable\ounces has the value 16, thus representing one pound. What simple Python statement will accomplish this?
+
+ounces = 16
+Correct
+
+6. A gram is equal to 0.035274 ounces. Assume that the variable \color{red}{\verb|mass_in_ounces|}mass_in_ounces has a value representing a given mass in ounces. Which Python statement below uses the variable mass_in_ounces to compute an equivalent mass mass_in_grams expressed in grams?
+Think about it mathematically, but also test these expressions in CodeSkulptor3. If you are still confused, you might check out this student tutorial video by Kelly on unit conversions.
+
+mass_in_grams = mass_in_ounces / 0.035274
+Correct
+
+
+7. Which of the following can be used as a variable name?
+Try using each in CodeSkulptor.
+
+MYnumber
+Correct
+This is a valid variable name. However, convention says that Python variables shouldn't start with a capital letter.
+
+number123
+Correct
+This is a valid variable name.
+
+
+8. Assume you have values in the variables x andy. Which statement(s) would result in x having the sum of the current values of x and y?
+Test your answer in CodeSkulptor.
+
+x = x + y
+Correct
+
+x += y
+Correct
+
+
+9. Python file names traditionally end in what characters after a period? Don't include the period.
+
+py
+Correct
+
+
+10. We encourage you to save your CodeSkulptor Python files where?
+
+In "the cloud" and on your computer
+Correct
+
+
+
+
+
