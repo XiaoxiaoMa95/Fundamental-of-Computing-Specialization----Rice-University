@@ -1,0 +1,170 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2512
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fnil\fcharset0 Monaco;\f2\fnil\fcharset0 STIXGeneral-Regular;
+}
+{\colortbl;\red255\green255\blue255;\red24\green24\blue24;\red255\green255\blue255;\red251\green0\blue7;
+\red60\green60\blue59;\red117\green66\blue151;\red52\green92\blue158;\red51\green136\blue141;\red240\green115\blue25;
+\red53\green118\blue190;}
+{\*\expandedcolortbl;;\cssrgb\c12157\c12157\c12157;\cssrgb\c100000\c100000\c100000;\cssrgb\c100000\c0\c0;
+\cssrgb\c30196\c30196\c29804;\cssrgb\c53725\c34902\c65882;\cssrgb\c25882\c44314\c68235;\cssrgb\c24314\c60000\c62353;\cssrgb\c96078\c52941\c12157;
+\cssrgb\c25882\c54510\c79216;}
+\margl1440\margr1440\vieww19100\viewh10520\viewkind0
+\deftab720
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs32 \cf2 \cb3 \expnd0\expndtw0\kerning0
+Tip #1\
+\cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\fs28 \cf2 \cb3 Many of you are tempted to make conditionals with 16 cases to handle every possible card position on the canvas. Please don't. Learn how to use loops. For example, if
+\fs33\fsmilli16940 \cb1 \
+\pard\pardeftab720\partightenfactor0
+\cf4 \cb3 cards
+\fs28 \cf2  contains the list of card values, the following code is a good start towards drawing cards\cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\f1\fs24 \cf5 \
+\pard\pardeftab720\partightenfactor0
+\cf6 \cb3 for\cf5  card_index \cf6 in\cf5  \cf7 range\cf5 (\cf7 len\cf5 (cards)):\cb1 \
+\cb3     card_pos \cf8 =\cf5  \cf9 50\cf5  \cf8 *\cf5  card_index\cb1 \
+\cb3     canvas.draw_text(\cf7 str\cf5 (cards[card_index]), card_pos, ....)\cb1 \
+\
+\
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs28 \cf2 \cb3 Note that we could also iterate directly over the cards via
+\fs33\fsmilli16940 \cb1  \cf4 \cb3 for\'a0card\'a0in\'a0cards:
+\fs28 \cf2 . However, iterating over the indices of the cards will make adding code to expose cards based on mouse clicks easier.\
+\
+\
+\pard\pardeftab720\partightenfactor0
+
+\fs32 \cf2 Tip #2\cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\fs28 \cf2 \cb3 In your mouse click handler, you need to determine which card you have clicked on. Don't use a long if/elif/else statement here. Compute the index of the card via
+\f2\fs33\fsmilli16940 \cb1  
+\f0 \cf4 \cb3 pos[0]\'a0//\'a050
+\fs28 \cf2 . You can then use this index when manipulating the list exposed that control whether a card is drawn or not.\
+\
+\pard\pardeftab720\partightenfactor0
+\cf2 \cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\fs32 \cf2 \cb3 Tip #3\cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\fs28 \cf2 \cb3 As you get close to the end of this mini-project, you will need to determine if the two cards match when you transition from state two to state one. The key here is to keep track of the indices of two cards that were clicked on during the last turn (in two separate variables) so you can test whether their values are equal during the next turn.\
+\
+\pard\pardeftab720\partightenfactor0
+\cf2 \cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\fs32 \cf2 \cb3 Tip #4 - Bonus tip for images\cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\fs28 \cf2 \cb3 If you intend to use images in your mini-project, please remember to test your finished mini-project on a separate computer to make sure that your images will load successfully for your peers when they assess your project. It's your responsibility to make sure that the images load successfully.\cb1 \
+\cb3 Also, I would suggest that you hard code the size of your images into your mini-project. If you compute
+\fs33\fsmilli16940 \cb1  \cf4 \cb3 my_image.get_width()
+\fs28 \cf2  and
+\fs33\fsmilli16940 \cb1  \cf4 \cb3 my_image.get_height()
+\fs28 \cf2  before
+\fs33\fsmilli16940 \cb1  \cf4 \cb3 my_image
+\fs28 \cf2  has finished loading, these calls will return size zero. If you use a source rectangle of size zero in subsequent calls to
+\fs33\fsmilli16940 \cb1  \cf4 \cb3 draw_image(my_image,\'a0...)
+\fs28 \cf2  , the call will throw a DOM error.\
+\
+\pard\pardeftab720\partightenfactor0
+\cf2 \cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\fs32 \cf2 \cb3 Tip #5 - A visual explanation of Memory's states (from post by Andrea)\cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\fs28 \cf2 \cb3 I am seeing a lot of confusion over how the suggested implementation using states works in Memory. I suggest starting by reviewing {\field{\*\fldinst{HYPERLINK "http://www.codeskulptor.org/#examples-memory_states.py"}}{\fldrslt \cf10 \ul \ulc10 this bit of code}} provided in the Memory lecture. Then I suggest that you review diagram below which is designed to show the the sequence of states that occur as the player clicks through the game. This is what steps 7 and 8 are asking you to code.\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\fs24 \cf0 \cb1 \kerning1\expnd0\expndtw0 {{\NeXTGraphic Screen Shot 2020-05-12 at 6.43.08 PM.png \width21720 \height12960 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\
+\pard\pardeftab720\partightenfactor0
+
+\fs32 \cf2 \cb3 \expnd0\expndtw0\kerning0
+Tip #6 - Drawing cards using the list 
+\fs38\fsmilli19360 \cf4 exposed
+\fs32 \cf2  and a
+\fs38\fsmilli19360 \cf2 \cb1  \cf4 \cb3 for
+\fs32 \cf2  loop (from post by Rebecca)\cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\fs28 \cf2 \cb3 I have seen lots of people confused by how to loop through the indices of the cards and draw the number or the blank card depending on the value of that card in the exposed list. I've written a version of the memory program that visualizes the indices of the cards, the values of the card list and the value of the exposed list, so you can see how these relate to each other, and how you can access them using the index of the cards. I hope this helps someone! Here is the start of the game: the game is in the first row, the card index is in the second row, the values of the cards in the third row, and the values of exposed in the fourth row. At the start of the game, all cards are face down, so the value of each element of exposed is False. (This is state 0.)\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\fs24 \cf0 \cb1 \kerning1\expnd0\expndtw0 {{\NeXTGraphic Screen Shot 2020-05-12 at 10.07.32 PM.png \width16800 \height7800 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\fs28 \cf2 \cb3 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720\partightenfactor0
+\cf2 \
+Below the first card has been clicked. The value of exposed[1] is True, so the draw handler draws the number at card_deck[1]. (This is state 1.)\cb1 \
+\cb3 \
+\pard\pardeftab720\partightenfactor0
+
+\fs24 \cf0 \cb1 \kerning1\expnd0\expndtw0 {{\NeXTGraphic Screen Shot 2020-05-12 at 10.07.55 PM.png \width17160 \height7700 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\pard\pardeftab720\partightenfactor0
+\cf0 \
+
+\fs28 \cf2 \cb3 \expnd0\expndtw0\kerning0
+\
+Below a second, non-matching card has been clicked. The value of exposed[1] and exposed [3] are True, so the draw handler draws the number at card_deck[1] and card_deck[2]. All other values of exposed are False, so blank cards are drawn for these card indices. (This is state 2.)\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\fs24 \cf0 \cb1 \kerning1\expnd0\expndtw0 {{\NeXTGraphic Screen Shot 2020-05-12 at 10.08.13 PM.png \width16920 \height7780 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\fs28 \cf2 \cb3 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720\partightenfactor0
+\cf2 Below the next unexposed card is clicked, the values of exposed in the first two cards are changed back to False. The new card index is 5, and now only exposed[5] is True in the exposed list so only card_deck[5] is drawn. (This is state 1.)\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\fs24 \cf0 \cb1 \kerning1\expnd0\expndtw0 {{\NeXTGraphic Screen Shot 2020-05-12 at 10.08.41 PM.png \width17140 \height7840 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\fs28 \cf2 \cb3 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720\partightenfactor0
+\cf2 Below when there is a match, the corresponding elements in exposed are changed to True. (This is state 2.)\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\fs24 \cf0 \cb1 \kerning1\expnd0\expndtw0 {{\NeXTGraphic Screen Shot 2020-05-12 at 10.10.42 PM.png \width17380 \height7800 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\fs28 \cf2 \cb3 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720\partightenfactor0
+\cf2 Below when another exposed card is clicked, with index 2, the exposed values for the matched cards stays as True, and exposed[2] is also changed to True, so the draw handler now draws the numbers at card_deck[2], card_deck[5] an card_deck[11]. (This is state 1.)\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\fs24 \cf0 \cb1 \kerning1\expnd0\expndtw0 {{\NeXTGraphic Screen Shot 2020-05-12 at 10.10.15 PM.png \width16680 \height7740 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\fs28 \cf2 \cb3 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720\partightenfactor0
+\cf2 \
+
+\fs24 \cf0 \cb1 \kerning1\expnd0\expndtw0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 \
+\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\fs28 \cf2 \cb3 \expnd0\expndtw0\kerning0
+\
+}

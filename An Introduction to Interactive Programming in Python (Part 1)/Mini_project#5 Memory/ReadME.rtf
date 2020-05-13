@@ -1,0 +1,109 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2512
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fswiss\fcharset0 Helvetica-Bold;\f2\fnil\fcharset0 HelveticaNeue;
+\f3\fnil\fcharset0 STIXGeneral-Regular;\f4\fnil\fcharset0 HelveticaNeue-Bold;}
+{\colortbl;\red255\green255\blue255;\red24\green24\blue24;\red255\green255\blue255;\red53\green118\blue190;
+\red251\green0\blue7;}
+{\*\expandedcolortbl;;\cssrgb\c12157\c12157\c12157;\cssrgb\c100000\c100000\c100000;\cssrgb\c25882\c54510\c79216;
+\cssrgb\c100000\c0\c0;}
+{\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc0\levelnfcn0\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{decimal\}}{\leveltext\leveltemplateid1\'01\'00;}{\levelnumbers\'01;}\fi-360\li720\lin720 }{\listname ;}\listid1}}
+{\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}}
+\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\deftab720
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs44 \cf2 \cb3 \expnd0\expndtw0\kerning0
+Mini-project description - Memory\cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\fs28 \cf2 \cb3 Memory is a card game in which the player deals out a set of cards face down. In Memory, a turn (or a move) consists of the player flipping over two cards. If they match, the player leaves them face up. If they don't match, the player flips the cards back face down. The goal of Memory is to end up with all of the cards flipped face up in the minimum number of turns. For this project, we will keep our model for Memory fairly simple. A Memory deck consists of eight pairs of matching cards.\
+\
+\pard\pardeftab720\partightenfactor0
+
+\fs32 \cf2 Mini-project development process\cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\fs28 \cf2 \cb3 As usual, we suggest that you start from the {\field{\*\fldinst{HYPERLINK "http://www.codeskulptor.org/#examples-memory_template.py"}}{\fldrslt 
+\f1\b \cf4 \ul \ulc4 program template}} for this mini-project.\cf2 \cb1 \
+\pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
+\ls1\ilvl0
+\f2 \cf2 \cb3 \kerning1\expnd0\expndtw0 {\listtext	1	}\expnd0\expndtw0\kerning0
+Model the deck of cards used in Memory as a list consisting of 16 numbers with each number lying in the range [0,8) and appearing twice. We suggest that you create this list by concatenating two list with range [0,8) together. Use the Docs to locate the list concatenation operator.\cb1 \
+\ls1\ilvl0\cb3 \kerning1\expnd0\expndtw0 {\listtext	2	}\expnd0\expndtw0\kerning0
+Write a draw handler that iterates through the Memory deck using a 
+\f0\fs33\fsmilli16940 \cf5 for
+\f3 \cb1  
+\f2\fs28 \cf2 \cb3 loop and uses
+\f0\fs33\fsmilli16940 \cb1  \cf5 \cb3 draw_text
+\f2\fs28 \cf2  to draw the number associated with each card on the canvas. The result should be a horizontal sequence of evenly-spaced numbers drawn on the canvas.\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
+\ls1\ilvl0\cf2 \kerning1\expnd0\expndtw0 {\listtext	3	}\expnd0\expndtw0\kerning0
+Shuffle the deck using 
+\f0\fs33\fsmilli16940 \cf5 random.shuffle()
+\f2\fs28 \cf2 . Remember to debug your canvas drawing code before shuffling to make debugging easier.\cb1 \
+\pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
+\ls1\ilvl0\cf2 \cb3 \kerning1\expnd0\expndtw0 {\listtext	4	}\expnd0\expndtw0\kerning0
+Next, modify the draw handler to either draw a blank green rectangle or the card's value. To implement this behavior, we suggest that you create a second list called 
+\f0\fs33\fsmilli16940 \cf5 exposed
+\f2\fs28 \cf2 . In the 
+\f0\fs33\fsmilli16940 \cf5 exposed
+\f2\fs28 \cf2  list, the 
+\f3\fs33\fsmilli16940 \cf2 i^th 
+\f2\fs28 \cf2 entry should be 
+\f0\fs33\fsmilli16940 \cf5 True
+\f2\fs28 \cf2  if the 
+\f3\fs33\fsmilli16940 \cf2 i^th \cf2 \cb1  
+\f2\fs28 \cb3 card is face up and its value is visible or 
+\f0\fs33\fsmilli16940 \cf5 False
+\f2\fs28 \cf2  if the 
+\f3\fs33\fsmilli16940 \cf2 i\cf2 \cb1 ^th 
+\f2\fs28 \cb3 card is face down and its value is hidden. We suggest that you initialize 
+\f0\fs33\fsmilli16940 \cf5 exposed
+\f2\fs28 \cf2  to some known values while testing your drawing code with this modification.\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
+\ls1\ilvl0\cf2 \kerning1\expnd0\expndtw0 {\listtext	5	}\expnd0\expndtw0\kerning0
+Now, add functionality to determine which card you have clicked on with your mouse. Add an event handler for mouse clicks that takes the position of the mouse click and prints the index of the card that you have clicked on to the console. To make determining which card you have clicked on easy, we suggest sizing the canvas so that the sequence of cards entirely fills the canvas.\
+\ls1\ilvl0\kerning1\expnd0\expndtw0 {\listtext	6	}\expnd0\expndtw0\kerning0
+Modify the event handler for mouse clicks to flip cards based on the location of the mouse click. If the player clicked on the i^th
+\f0\fs33\fsmilli16940 \cb1  
+\f2\fs28 \cb3 card, you can change the value of
+\f0\fs33\fsmilli16940 \cf5 \kerning1\expnd0\expndtw0  \expnd0\expndtw0\kerning0
+exposed[i]
+\f2\fs28 \cf2  from
+\f0\fs33\fsmilli16940 \cf5 False
+\f2\fs28 \cf2  to
+\f0\fs33\fsmilli16940 \cb1  \cf5 \cb3 True
+\f2\fs28 \cf2 . 
+\f4\b \cf2 If the card is already exposed, you should ignore the mouseclick
+\f2\b0 \cf2 . At this point, the basic infrastructure for Memory is done.\
+\ls1\ilvl0\kerning1\expnd0\expndtw0 {\listtext	7	}\expnd0\expndtw0\kerning0
+You now need to add game logic to the mouse click handler for selecting two cards and determining if they match. We suggest following the game logic in the {\field{\*\fldinst{HYPERLINK "http://www.codeskulptor.org/#examples-memory_states.py"}}{\fldrslt 
+\f4\b \cf4 \ul \ulc4 example code}} discussed in the Memory video. State 0 corresponds to the start of the game. In state 0, if you click on a card, that card is exposed, and you switch to state 1. State 1 corresponds to a single exposed unpaired card. In state 1, if you click on an unexposed card, that card is exposed and you switch to state 2. State 2 corresponds to the end of a turn. In state 2, if you click on an unexposed card, that card is exposed and you switch to state 1. 
+\f4\b \cf2 Note that if you are having difficulty with steps 6 and 7, please consult the tips # 5 and #6 on the Code Clinic tips page.\
+\ls1\ilvl0
+\f2\b0 \cf2 \kerning1\expnd0\expndtw0 {\listtext	8	}\expnd0\expndtw0\kerning0
+Note that in state 2, you also have to determine if the previous two cards are paired or unpaired. If they are unpaired, you have to flip them back over so that they are hidden before moving to state 1. We suggest that you use two global variables to store the index of each of the two cards that were clicked in the previous turn.\cb1 \
+\pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
+\ls1\ilvl0\cf2 \cb3 \kerning1\expnd0\expndtw0 {\listtext	9	}\expnd0\expndtw0\kerning0
+Add a counter that keeps track of the number of turns and uses 
+\f0\fs33\fsmilli16940 \cf5 set_text
+\f2\fs28 \cf2  to update this counter as a label in the control panel. (BTW, Joe's record is 12 turns.) This counter should be incremented after either the first or second card is flipped during a turn.\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
+\ls1\ilvl0\cf2 \kerning1\expnd0\expndtw0 {\listtext	10	}\expnd0\expndtw0\kerning0
+Finally, implement the 
+\f0\fs33\fsmilli16940 \cf5 new_game()
+\f2\fs28 \cf2  function (if you have not already) so that the "Reset" button reshuffles the cards, resets the turn counter and restarts the game. All cards should start the game hidden.\cb1 \
+\pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
+\ls1\ilvl0\cf2 \cb3 \kerning1\expnd0\expndtw0 {\listtext	11	}\expnd0\expndtw0\kerning0
+(Optional) You may replace the 
+\f0\fs33\fsmilli16940 \cf5 draw_text
+\f2\fs28 \cf2  for each card by a 
+\f0\fs33\fsmilli16940 \cf5 draw_image
+\f2\fs28 \cf2  that uses one of eight different images.\
+\pard\tx720\pardeftab720\partightenfactor0
+\cf2 \
+\pard\pardeftab720\partightenfactor0
+
+\f0 \cf2 Once the run button is clicked in CodeSkulptor, the game should start. You should not have to hit the "Reset" button to start. Once the game is over, you should hit the "Reset" button to restart the game.\cf2 \cb1 \
+\cf2 \cb3 While this project may seem daunting at first glance, our full implementation took well under 100 lines with comments and spaces. If you feel a little bit intimidated, focus on developing your project to step six. Our experience is that, at this point, you will begin to see your game come together and the going will get much easier. For more helpful tips on implementing this mini-project, please visit the Code Clinic Tips page for this mini-project.
+\f2 \cf2 \cb1 \
+}
