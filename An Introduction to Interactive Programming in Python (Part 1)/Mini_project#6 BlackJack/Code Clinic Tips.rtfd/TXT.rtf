@@ -1,0 +1,242 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2512
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fnil\fcharset0 HelveticaNeue;\f2\fnil\fcharset0 Monaco;
+\f3\fswiss\fcharset0 Helvetica-Bold;\f4\fnil\fcharset0 STIXGeneral-Regular;}
+{\colortbl;\red255\green255\blue255;\red24\green24\blue24;\red255\green255\blue255;\red251\green0\blue7;
+\red60\green60\blue59;\red117\green66\blue151;\red123\green126\blue121;\red158\green159\blue157;\red0\green0\blue0;
+\red53\green118\blue190;\red51\green136\blue141;}
+{\*\expandedcolortbl;;\cssrgb\c12157\c12157\c12157;\cssrgb\c100000\c100000\c100000;\cssrgb\c100000\c0\c0;
+\cssrgb\c30196\c30196\c29804;\cssrgb\c53725\c34902\c65882;\cssrgb\c55686\c56471\c54902;\cssrgb\c68235\c68627\c67843;\cssrgb\c0\c0\c0;
+\cssrgb\c25882\c54510\c79216;\cssrgb\c24314\c60000\c62353;}
+{\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid1\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid1}
+{\list\listtemplateid2\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid101\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid2}}
+{\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}{\listoverride\listid2\listoverridecount0\ls2}}
+{\info
+{\keywords cursorLocation=7025, fitsPagesWidth=1}}\margl1008\margr1008\margt1008\vieww15520\viewh15480\viewkind1\viewscale121
+\deftab720
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs32 \cf2 \cb3 \expnd0\expndtw0\kerning0
+Tip #1 - Getting started on step one\
+\cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\fs28 \cf2 \cb3 The program template implements the Card class for you. The class definition includes an initialization method
+\fs33\fsmilli16940 \cb1  \cf4 \cb3 __init__
+\fs28 \cf2  that is called whenever we create a card via
+\fs33\fsmilli16940 \cb1  \cf4 \cb3 Card(...,\'a0...)
+\fs28 \cf2 , several methods for accessing the fields of a Card object and a method
+\fs33\fsmilli16940 \cb1  \cf4 \cb3 __str__
+\fs28 \cf2  that is called when we want to print out information about a Card object.\
+\pard\pardeftab720\partightenfactor0
+\cf2 \cb1 \
+\pard\pardeftab720\partightenfactor0
+\cf2 \cb3 We have also provided a testing template that calls the provided Card class and includes what the expected output should look like. Cut and paste the Card class code into the template and run the template. If the output from the run matches the output in the comments, the implementation of the Class probably works.\
+\pard\pardeftab720\partightenfactor0
+\cf2 \cb1 \
+\pard\pardeftab720\partightenfactor0
+\cf2 \cb3 As you implement the Hand class and the Deck classes, you should go through the same testing process for the various methods associated with these classes. Don't rush on to implement the next step without testing first. Note that you don't need to use the canvas to test these methods since we have the string method available to print out the information about class objects to the console.\
+\
+\pard\pardeftab720\partightenfactor0
+
+\fs32 \cf2 Tip #2 - Implementing the basic
+\fs38\fsmilli19360 \cf2 \cb1  \cf4 \cb3 Hand
+\fs32 \cf2  class\cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\fs28 \cf2 \cb3 Step two asks you to implement the methods
+\fs33\fsmilli16940 \cb1  \cf4 \cb3 __init__
+\fs28 \cf2 ,
+\fs33\fsmilli16940 \cb1  \cf4 \cb3 __str__
+\fs28 \cf2 , and
+\fs33\fsmilli16940 \cb1  \cf4 \cb3 add_card
+\fs28 \cf2  for the Hand class. Logically, we will think of a hand as a collection cards which we will model in Python as a list of cards. So, to implement the basics of a Hand class, we will need a field in the Hand class to keep track of the list of cards. For the sake of simplicity, let's call that field cards.\cb1 \
+\pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
+\ls1\ilvl0
+\f1 \cf2 \cb3 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+The 
+\f0\fs33\fsmilli16940 \cf4 __init__
+\f1\fs28 \cf2  method should create an empty hand by assigning an empty list to the cards field. Implementing this method should be one line of code.\cb1 \
+\ls1\ilvl0\cb3 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+The 
+\f0\fs33\fsmilli16940 \cf4 add_card(card)
+\f1\fs28 \cf2  method should take the Card object 
+\f0\fs33\fsmilli16940 \cf4 card
+\f1\fs28 \cf2  and append it to the list in the cards field. Implementing this method should be one line of code.\cb1 \
+\ls1\ilvl0\cb3 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+The 
+\f0\fs33\fsmilli16940 \cf4 __str__
+\f1\fs28 \cf2  method should return a string the includes the string representations for each card (remember you have a string method for Cards to turn a card into a string). Take a look at problem 4 in the practice exercises for mouse and list methods if you are stuck on building this string.\cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\f0 \cf2 \cb3 Before proceeding, remember to use the testing template to check whether your Hand class is implemented correctly.\cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\fs32 \cf2 \cb3 Tip #3 - Implementing the Deck class\cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\fs28 \cf2 \cb3 Step three asks you to implement methods for the Deck class. Just as in the case of the Hand class, we suggest modeling a deck as a list of cards and keep track of that list using a single field in the Deck class. The method
+\fs33\fsmilli16940 \cb1  \cf4 \cb3 deal_card
+\fs28 \cf2  can be implemented in a single line using a common list operation. The
+\fs33\fsmilli16940 \cb1  \cf4 \cb3 shuffle
+\fs28 \cf2  method can be implemented using
+\fs33\fsmilli16940 \cb1  \cf4 \cb3 random.shuffle(...)
+\fs28 \cf2 . (Remember that
+\fs33\fsmilli16940 \cb1  \cf4 \cb3 random.shuffle
+\fs28 \cf2  does not return the shuffled list; a it mutates it's parameter.) You should also implement the
+\fs33\fsmilli16940 \cb1  \cf4 \cb3 __str__
+\fs28 \cf2  method to aid in debugging. (This implementation of this method is almost identical to that of the string method for hands.)\cb1 \
+\cb3 The trickiest method is
+\fs33\fsmilli16940 \cb1  \cf4 \cb3 __init__
+\fs28 \cf2 which should return a deck containing all 52 cards. To implement
+\fs33\fsmilli16940 \cb1  \cf4 \cb3 init
+\fs28 \cf2  for the Deck class, we suggest that you use a pair of nested for-loops or a list comprehension with two for clauses. While building these loops, the first question that you should ask is: "What should these loops be iterating over?". For a deck of cards, the loops should be iterating over the entries in SUITS and RANKS. One possible structure for the loops would be something like:\cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\f2\fs24 \cf5 \
+\pard\pardeftab720\partightenfactor0
+\cf6 \cb3 for\cf5  suit \cf6 in\cf5  SUITS: \cb1 \
+\cb3     \cf6 for\cf5  rank \cf6 in\cf5  RANKS:\cb1 \
+\cb3         \cf7 # create a Card object using Card(suit, rank) and add it to the card \cf5 \cb1 \
+\cb3 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf7 list for the deck    \cf5 \cb1 \
+\
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs28 \cf2 \cb3 Again, test your implementation of the Deck class with the provided testing template before proceeding.\cb1 \
+\
+\pard\pardeftab720\partightenfactor0
+
+\fs32 \cf2 \cb3 Tip #4 - Hitting a hand using the
+\fs38\fsmilli19360 \cf2 \cb1  \cf4 \cb3 Hand
+\fs32 \cf2  and
+\fs38\fsmilli19360 \cf2 \cb1  \cf4 \cb3 Deck
+\fs32 \cf2  methods\cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\fs28 \cf2 \cb3 In step four, you are asked to use the
+\fs33\fsmilli16940 \cb1  \cf4 \cb3 add_card
+\fs28 \cf2  method for the Hand class and the
+\fs33\fsmilli16940 \cb1  \cf4 \cb3 deal_card
+\fs28 \cf2  method for the Deck class to "hit" a Blackjack hand. Given a deck called
+\fs33\fsmilli16940 \cb1  \cf4 \cb3 my_deck
+\fs28 \cf2  and a hand called
+\fs33\fsmilli16940 \cb1  \cf4 \cb3 my_hand
+\fs28 \cf2 , we can transfer a card from my_deck to my_hand via\cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\f2\fs24 \cf5 \
+\pard\pardeftab720\partightenfactor0
+\cf5 \cb3 my_hand.add_card(my_deck.deal_card())\cb1 \
+\
+\pard\pardeftab720\partightenfactor0
+\cf8 \
+\pard\pardeftab720\partightenfactor0
+\cf5 \
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs28 \cf2 \cb3 Note that this fairly abstract operation is expressed in a single line of code that reflects the logical structure of "hitting" a Blackjack hand. The
+\fs33\fsmilli16940 \cb1  \cf4 \cb3 Hand
+\fs28 \cf2  class and the
+\fs33\fsmilli16940 \cb1 \
+\pard\pardeftab720\partightenfactor0
+\cf4 \cb3 Deck
+\fs28 \cf2  class provide us with a layer of abstraction that allows to manipulate hands and deck at a level closer to the true logic of Blackjack.\
+\
+\pard\pardeftab720\partightenfactor0
+
+\fs32 \cf2 Tip #5 - Implementing the draw method for a hand\cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\fs28 \cf2 \cb3 Part of the usefulness of object-oriented programming is that we can use a method from one class to implement a method from another class. In the case of the draw method for a hand, we can use the draw method for card object. The draw method for a hand would look something like\cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\f2\fs24 \cf5 \
+\pard\pardeftab720\partightenfactor0
+\cf6 \cb3 def\cf5  draw(self, canvas, pos)\cb1 \
+\cb3     \cf6 for\cf5  c \cf6 in\cf5  self.cards:\cb1 \
+\cb3          c.draw(canvas,  ...)\cb1 \
+\cb3          ....\cb1 \
+\
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs28 \cf2 \cb3 The parameter pos will determine where the hand is drawn on the canvas. Note that for this method to work,
+\fs33\fsmilli16940 \cb1  \cf4 \cb3 c
+\fs28 \cf2  must be a card object (not a string or tuple). You need to fill in the remaining code (1 line) to position the individual cards in some reasonable pattern based on pos.\
+\
+\pard\pardeftab720\partightenfactor0
+
+\fs32 \cf2 Tip #6 - Automated testing\cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\fs28 \cf2 \cb3 Using the automated testing infrastructure that we have built for the "Fundamentals of Computing" series, we have built some automated unit tests for checking the informal testing templates that are provided in the mini-project description for Blackjack. Both the testing templates and their corresponding automated tests are linked below. To use one of the automated tests, fill in your implementation of the particular class in the testing template, save that program in CodeSkulptor and paste the URL into appropriate field on the unit testing page. 
+\f3\b \cf2 Note that the unit tests expect any auxiliary information like the
+\f0\b0\fs33\fsmilli16940 \cf2 \cb1  \cf4 \cb3 Card
+\f3\b\fs28 \cf2  class to be included in the submitted code
+\f0\b0 \cf2 .\cb1 \
+\cb3 These automated test are more extensive than the manual tests present in the testing templates. You are welcome to post questions in this thread, especially for situations when your code passes the informal tests, but fails the automated tests. However, please do not post a link to your class implementation in this thread. If necessary, you may email your code to the Code Clinic (interactivepython@online.rice.edu) for assistance.\cb1 \
+\pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
+\ls2\ilvl0
+\f4\fs33\fsmilli16940 \cf9 \cb3 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}
+\f0 \cf4 \expnd0\expndtw0\kerning0
+Card
+\f1\fs28 \cf2  class (just to get started) -- {\field{\*\fldinst{HYPERLINK "http://www.codeskulptor.org/#examples-card_template.py"}}{\fldrslt \cf10 \ul \ulc10 Informal testing template }}and {\field{\*\fldinst{HYPERLINK "http://codeskulptor.appspot.com/owltest/?urlTests=iipp_f13.blackjack_card_tests.py&urlPylintConfig=skip"}}{\fldrslt \cf10 \ul \ulc10 automated unit test}}\cb1 \
+\pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
+\ls2\ilvl0\cf2 \cb3 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}   
+\f4\fs33\fsmilli16940 \cf9 \'95
+\f1\fs28 \cf2 	\expnd0\expndtw0\kerning0
+Partial 
+\f4\fs33\fsmilli16940 \cf4  
+\f0 Hand
+\f1\fs28 \cf2  class -- {\field{\*\fldinst{HYPERLINK "http://www.codeskulptor.org/#examples-hand_template.py"}}{\fldrslt \cf10 \ul \ulc10 Informal testing template}} and {\field{\*\fldinst{HYPERLINK "http://codeskulptor.appspot.com/owltest/?urlTests=iipp_f13.blackjack_hand_tests_partial_1.py&urlPylintConfig=skip"}}{\fldrslt \cf10 \ul \ulc10 automated unit test}}\cb1 \
+\pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
+\ls2\ilvl0
+\f4\fs33\fsmilli16940 \cf9 \cb3 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}
+\f0 \cf4 \expnd0\expndtw0\kerning0
+Deck
+\f1\fs28 \cf2  class -- {\field{\*\fldinst{HYPERLINK "http://www.codeskulptor.org/#examples-deck_template.py"}}{\fldrslt \cf10 \ul \ulc10 Informal testing template}} and {\field{\*\fldinst{HYPERLINK "http://codeskulptor.appspot.com/owltest/?urlTests=iipp_f13.blackjack_deck_tests.py&urlPylintConfig=skip"}}{\fldrslt \cf10 \ul \ulc10 automated unit test}}\cb1 \
+\pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
+\ls2\ilvl0
+\f4\fs33\fsmilli16940 \cf4 \cb3 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+ 
+\f0 Hand
+\f1\fs28 \cf2  class with 
+\f0\fs33\fsmilli16940 \cf4 get_value()
+\f1\fs28 \cf2  -- {\field{\*\fldinst{HYPERLINK "http://www.codeskulptor.org/#examples-getvalue_template.py"}}{\fldrslt \cf10 \ul \ulc10 Informal testing template}} and {\field{\*\fldinst{HYPERLINK "http://codeskulptor.appspot.com/owltest/?urlTests=iipp_f13.blackjack_hand_tests_partial_2.py&urlPylintConfig=skip"}}{\fldrslt \cf10 \ul \ulc10 automated unit test}}\cb1 \
+\pard\tx560\pardeftab720\partightenfactor0
+\cf2 \
+\
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs32 \cf2 \cb3 Tip #7 - Attribute errors\cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\fs28 \cf2 \cb3 If you are getting an error like this:
+\fs33\fsmilli16940 \cb1 \
+\pard\pardeftab720\partightenfactor0
+\cf4 \cb3 AttributeError:\'a0\'92str\'92\'a0object\'a0has\'a0no\'a0attribute\'a0\'92get_rank\'92 
+\fs28 \cf2 it is (probably) because you've made a Deck and/or a Hand that is full of strings instead of full of Cards. Whenever you create a card you should call the
+\fs33\fsmilli16940 \cb1  \cf4 \cb3 Card
+\fs28 \cf2  method, which is the same as saying the
+\fs33\fsmilli16940 \cb1  \cf4 \cb3 init
+\fs28 \cf2  method of the Card class. You would say something like\cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\f2\fs24 \cf5 \
+\pard\pardeftab720\partightenfactor0
+\cf5 \cb3      new_card \cf11 =\cf5  Card(.....)\cb1 \
+\
+\
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs28 \cf2 \cb3 There are only 2 methods that need this if I recall correctly. One is the
+\fs33\fsmilli16940 \cb1  \cf4 \cb3 Deck
+\fs28 \cf2  method that creates a new deck. It must use
+\fs33\fsmilli16940 \cb1  \cf4 \cb3 Card
+\fs28 \cf2  to make the cards.The
+\fs33\fsmilli16940 \cb1  \cf4 \cb3 add_card
+\fs28 \cf2  method should use the "card" that is PASSED IN. It should NOT create a card in any way.\cb1 \
+\
+\pard\tx560\pardeftab720\partightenfactor0
+
+\f1 \cf2 \
+\
+}
