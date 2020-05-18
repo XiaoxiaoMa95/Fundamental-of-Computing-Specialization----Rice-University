@@ -1,3 +1,2 @@
 # Fundamental-of-Computing-Specialization----Rice-University
-Mini project code 
-Quiz Answer just for own study
+Mini project code and Quiz answer just for own study
