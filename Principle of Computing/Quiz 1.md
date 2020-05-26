@@ -3,9 +3,12 @@ For the first question in this assignment, enter the type of the Python expressi
 
 float
 
+
+
 2. An if statement can have at most how many else parts?
 
 1
+
 
 
 3. Consider the following Python code snippet:
@@ -20,10 +23,14 @@ Enter the value returned by Python after evaluating the expression clock_helper(
 
 None 
 
+
+
 4. In Python, what character always appears at the end of the line before the start of an indented block of code?
 
 :
 A colon signals Python that the next statement should be indented.
+
+
 
 5. Which of the following expressions returns the last character in the non-empty string my_string?
 my_string[-1]
@@ -31,10 +38,11 @@ my_string[len(my_string) - 1]
  
 
 
-
 6. What is the primary difference between a list and a tuple?
 
 List is mutable, tuple is immutable.
+
+
 
 7. Consider the following snippet of Python code. What is the value of val2[1] after executing this code?
 
@@ -46,10 +54,14 @@ XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
 3
 
+
+
 8.  Which of the following Python expressions is a valid key in a Python dictionary?
 
 None, False, "", 0
 Remember that the keys in a Python dictionary must be immutable.
+
+
 
 9. Write a function in Python that takes a list as input and repeatedly appends the sum of the last three elements of the list to the end of the list. Your function should loop for 25 times.
 
@@ -67,6 +79,8 @@ XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 Enter the value of sum_three [20] below.
 
 101902
+
+
 
 10. First, complete the following class definition:
 
