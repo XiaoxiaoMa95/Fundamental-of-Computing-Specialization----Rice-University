@@ -20,13 +20,6 @@ For this assignment, you will implement a function merge(line) that models the p
 
 In this function, you are always sliding the values in the list towards the front of the list (the list position with index 0). You will make sure you order the entries in line appropriately when you call this function later in the next assignment. Empty grid squares with no displayed value will be assigned a value of zero in our representation.
 
-For example, if a row of the board started as follows:
-￼
-![F5FC0F25-F84D-43FF-97D7-E7D78F23459F](Mini%20project%20description.rtfd/F5FC0F25-F84D-43FF-97D7-E7D78F23459F.png)
-And you slide the tiles left, the row would become:
-![2DF35037-E3FB-4587-8F03-610F42A571A6](Mini%20project%20description.rtfd/2DF35037-E3FB-4587-8F03-610F42A571A6.png)
-￼
-
 Note that the two leftmost tiles merged to become a 4 and the third 2 just slides over next to the 4.
 A given tile can only merge once on any given turn, although many pairs of tiles could merge on a single turn.
 
