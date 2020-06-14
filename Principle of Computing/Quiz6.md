@@ -2,6 +2,7 @@
 Examine the behavior of this recursive program that models the story of the "Cat in the Hat" by Dr. Suess. How many calls to the function  clean_up are made by the program?
 
 28
+
 Correct
 Correct.  clean_up is called with "Cat in the Hat", 26 versions of "Little_Cat_x", and "Voom".
 
@@ -16,7 +17,8 @@ def add_up(n):
 If n is non-negative integer, enter a math expression in nn for the value returned by add_up(n).
 Preview
 
-n/2 (n+1)
+n/2 * (n+1)
+
 Correct
 Correct. add_upadd_up just computes the sum of the numbers from 00 to nn.
 
@@ -32,6 +34,7 @@ If n is non-negative integer, enter a math expression in n for the value returne
 Preview
 
 n!
+
 Correct
 Correct. This is a recursive implementation of factorial.
 
@@ -49,6 +52,7 @@ Let f(n) be the total number of calls to the function fib that are computed duri
 You may want to add a global counter to the body of fib that records the number of calls for small values of n.
 
 f(0)=1,f(1)=1,f(n)= f(n-1)+f(n-2)+1
+
 Correct
 Correct. The number of calls to fib(n) is one plus the number of recursive calls to fib(n - 1) andfib(n - 2).
 
@@ -69,6 +73,7 @@ You may want to add a global counter to the body of memoized_fib keeps track of 
 Preview
 
 2n-1
+
 Correct
 
 
@@ -91,6 +96,7 @@ Enter the solution to this recurrence (as given in the notes) as a math expressi
 Preview
 
 n!
+
 Correct
 Correct. There are n! permutations of length n from a set of n outcomes.
 
@@ -102,6 +108,7 @@ The body of merge consists of a while loop that iterates until one of the lists 
 If list1 and list2 are both of length n, which expression below grows at the same rate as the running time (i.e; the number of Python statements executed) of merge?
 
 n
+
 Correct
 Correct. Each iteration of the while removes one element from one of the lists. Therefore, the while loop iterates at most 2n times.
 
